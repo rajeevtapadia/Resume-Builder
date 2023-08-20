@@ -1,0 +1,21 @@
+body{
+    max-width: 800px;
+    margin: 50px auto;
+}
+.header{
+    display: flex;
+    align-items: center;
+}
+.profile{
+    size: 100px;
+    margin-right: 30px;
+}
+.name{
+    padding: auto;
+}
+.aboutme{
+    text-align: justify;
+}
+td{
+    padding: 10px
+}
