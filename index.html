@@ -8,22 +8,23 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="modal.css">
 </head>
 
 <body>
-  
+
   <div class="header">
-            <img src="profile photo stock.jpg" class="profile" height="140px">
-            <h1 class="name">Rajeev Tapadia</h1>
-          </div>
-          <h3>SY Student, Vishwakarma Institute of Technology Pune</h3>
-          <br>
-          <p>Address: 1, Sai Nagar, Shatrunjay Nagar, Kondhwa Budruk, Pune, Maharashtra 411048</p>
-          <p>Phone: 9403487559</p>
-          <p>Email: rajeev.tapadia22@vit.edu</p>
-          <br>
-          
-          <!--
+    <img src="assets/profile photo stock.jpg" class="profile" height="140px">
+    <h1 class="name">Rajeev Tapadia</h1>
+  </div>
+  <h3>SY Student, Vishwakarma Institute of Technology Pune</h3>
+  <br>
+  <p>Address: 1, Sai Nagar, Shatrunjay Nagar, Kondhwa Budruk, Pune, Maharashtra 411048</p>
+  <p>Phone: 9403487559</p>
+  <p>Email: rajeev.tapadia22@vit.edu</p>
+  <br>
+
+  <!--
         <h2>About Me</h2>
         <p class="aboutme">I am a BTech perusing student that had always been fascinated by technology and computers.
             Being around technology since childhood I have a keen interest, a strong intuition towards technology.
@@ -94,11 +95,12 @@
 
 
   <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  <button type="button" id="edit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
     Edit
   </button>
 
   <!-- Modal -->
+  <!-- removed fade from class -->
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -110,7 +112,7 @@
         <div class="modal-body">
           <!-- form for taking user data -->
           <form>
-            <section>
+            <section class="form-sec">
               <h2 class="section-header">Personal Details</h2>
               <div class="form-group">
                 <label for="formGroupExampleInput">Full Name</label>
@@ -125,66 +127,95 @@
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
               </div>
               <div class="form-group">
-              <label for="formGroupExampleInput2">Mobile No</label>
-              <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Mobile No">
-            </div>
-            <div class="form-group">
-              <label for="formGroupExampleInput2">Email</label>
-              <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="Email">
-            </div>
-          </section>
+                <label for="formGroupExampleInput2">Mobile No</label>
+                <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Mobile No">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Email</label>
+                <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="Email">
+              </div>
+              <div class="input-group mb-3 form-group">
+                <label for="">Upload Your Photo</label>
+                <div class="input-group-prepend">
+                  <!-- <span class="input-group-text">Upload</span> -->
+                </div>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile01">
+                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                </div>
+              </div>
+            </section>
 
-          <section>
-            <h2 class="section-header">Professional Summary</h2>
-            <div class="form-group">
-              <label for="exampleFormControlTextarea1"><small>Write 2-4 short & energetic sentences to interest the reader</small></label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-          </section>
+            <section class="form-sec">
+              <h2 class="section-header">Professional Summary</h2>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1"><small>Write 2-4 short & energetic sentences to interest the
+                    reader</small></label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+            </section>
 
-          <section>
-            <h2 class="section-header">Education</h2>
-            <!-- use this div in js and create a button to add more of these -->
-            <div>
-              <div class="form-group">
-                <label for="formGroupExampleInput2">School</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2">
+            <section class="form-sec">
+              <h2 class="section-header">Education</h2>
+              <!-- use this div in js and create a button to add more of these -->
+              <div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">School</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput2">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Degree</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput2">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Start & End Date</label>
+                  <input type="date" class="form-control start-date" id="formGroupExampleInput2">
+                  <input type="date" class="form-control" id="formGroupExampleInput2">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">City</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput2">
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="formGroupExampleInput2">Degree</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2">
-              </div>
-              <div class="form-group">
-                <label for="formGroupExampleInput2">Start & End Date</label>
-                <input type="date" class="form-control" id="formGroupExampleInput2">
-                <input type="date" class="form-control" id="formGroupExampleInput2">
-              </div>
-              <div class="form-group">
-                <label for="formGroupExampleInput2">City</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2">
-              </div>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-              </div>
-            </div>
-            <button>Add Education</button>
-          </section>
+              <button class='form-btn btn btn-outline-secondary'>Add Education</button>
+            </section>
 
-          <section>
-            <h2 class="section-header">Skills</h2>
-            <div class="form-group">
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="eg. Web Developement">
-            </div>
-            <button>Add Skills</button>
-          </section>
-            <div class="form-group">
-              <label for="formGroupExampleInput2">College</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="College">
-            </div>
-            
-            
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <section class="form-sec">
+              <h2 class="section-header">Skills</h2>
+              <div class="form-group">
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="eg. Web Developement">
+              </div>
+              <button class='form-btn btn btn-outline-secondary'>Add Skills</button>
+            </section>
+            <section class="form-sec">
+              <h2 class="section-header">Languages</h2>
+              <label for="lang">Languages</label>
+              <select name="lang">
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Marathi">Marathi</option>
+                <option value="German">German</option>
+                <option value="Spanish">Spanish</option>
+                <option value="Japanease">Japanease</option>
+                <option value="Chinese">Chinese</option>
+              </select>
+              <br>
+              <!-- might implement later -->
+              <!-- <lable>Proficiency</lable> -->
+              <button class='form-btn btn btn-outline-secondary'>Add Language</button>
+            </section>
+            <section class="form-sec">
+              <h2 class="section-header">Links</h2>
+              <div class="form-group">
+                <!-- <label for="formGroupExampleInput2">College</label> -->
+                <input type="url" class="form-control" id="formGroupExampleInput2" placeholder="">
+              </div>
+              <button class='form-btn btn btn-outline-secondary'>Add Skills</button>
+            </section>
           </form>
           <!-- form end-->
         </div>
@@ -195,12 +226,20 @@
       </div>
     </div>
   </div>
-  
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
+
+  <script>
+  //  to show modal on load
+  window.addEventListener('load', (e) => {
+    const editbtn = document.getElementById('edit')
+    editbtn.click();
+  })
+  </script>
 </body>
 
 </html>
