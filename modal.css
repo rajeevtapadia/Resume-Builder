@@ -11,3 +11,10 @@
 .start-date{
     margin-bottom: 10px;
 }
+#edit{
+    padding: 20px;
+    border-radius: 130px;
+    position: fixed;
+    bottom: 2vh;
+    right: 3vh;
+}

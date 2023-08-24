@@ -1,102 +1,119 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resume</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="modal.css">
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="modal.css" />
 </head>
 
 <body>
-
-  <div class="header">
-    <img src="assets/profile photo stock.jpg" class="profile" height="140px">
-    <h1 class="name">Rajeev Tapadia</h1>
-  </div>
-  <h3>SY Student, Vishwakarma Institute of Technology Pune</h3>
-  <br>
-  <p>Address: 1, Sai Nagar, Shatrunjay Nagar, Kondhwa Budruk, Pune, Maharashtra 411048</p>
-  <p>Phone: 9403487559</p>
-  <p>Email: rajeev.tapadia22@vit.edu</p>
-  <br>
-
-  <!--
-        <h2>About Me</h2>
-        <p class="aboutme">I am a BTech perusing student that had always been fascinated by technology and computers.
-            Being around technology since childhood I have a keen interest, a strong intuition towards technology.
-            Passionate about learning new things specifically in the field of software and applying them in real world.</p>
-            <br>
-            
-            <h2>Education</h2>
-            <h3>Vishwakarma Institute of Technology, Pune</h3>
-            <ul>
-                <li>
-                    <div>BTech in Information Technology</div>
-                </li>
-        <li>
-            <div>2022-2026</div>
-        </li>
-        <li>
-            <div>Score: 9.08 CGPA</div>
-        </li>
-    </ul>
-    <h3>Hislop College, Nagpur</h3>
-    <ul>
-        <li>
-            <div>HSC</div>
-        </li>
-        <li>
-            <div>2020-2022</div>
-        </li>
-        <li>
-            <div>Score: 88.7 %</div>
-        </li>
-    </ul>
-    <br>
-    
-    <h2>Skills</h2>
-    <div>
-        <ul>
-            <li><h3>Frontend Developement</h3></li>
-            <li><h3>Django Framework</h3></li>
-            <li><h3>React.js</h3></li>
-            <li><h3>Git</h3></li>
-        </ul>
+  <section id="personal">
+    <div class="header">
+      <img src="assets/profile photo stock.jpg" class="profile" height="140px" />
+      <h1 class="name">Rajeev Tapadia</h1>
     </div>
-    
-    <h2>Projects</h2>
-    <h3>SpendWise - An Expense Tracking Webapp</h3>
-    <p>With SpendWise, students can effortlessly monitor their 
-        expenditures, categorize them, and set budgets accordingly. 
-        It's a handy tool that promotes financial literacy and 
-        responsible spending habits among students.<br>
-        SpendWise <a href="https://github.com/rajeevtapadia/EDI2-SpendWise-v2-django">Github Repository</a>
-        and <a href="rajeevtapadia.pythonanywhere.com">Webapp</a>
-    </p>
-    
-    <h2>Awards</h2>
-    <table>
-        <tr>
-            <td>Code Wizard Award</td>
-            <td>October 15, 2023</td>
-            <td>This prestigious award is presented to the first-year computer science student who demonstrates exceptional problem-solving skills, innovative thinking, and an impressive ability to write efficient and elegant code.</td>
-        </tr>
-        <tr>
-            <td>Binary Brilliance Award</td>
-            <td>October 15, 2023</td>
-            <td>This distinguished award recognizes the first-year computer science student who exhibits outstanding mastery of the fundamental principles of computer science</td>
-        </tr>
-    </table>
--->
+    <h3 id="college">Vishwakarma Institute of Technology Pune</h3>
+    <br />
+    <p>Address: <span id="address">--</span></p>
+    <p>Mobile: <span id="phone">--</span></p>
+    <p>Email: <span id="email">--</span></p>
+    <br />
+  </section>
 
+  <section id="aboutme">
+    <h2>About Me</h2>
+    <p class="description">--</p>
+    <br />
+  </section>
+
+  <section id="edu">
+    <h2>Education</h2>
+    <div id="edu-container">
+      <h3>
+        <span id="school">VIT</span>
+        <span id="city">Pune</span>
+      </h3>
+      <ul>
+        <li>
+          <div id="degree">BTech in Information Technology</div>
+        </li>
+        <li>
+          <div>
+            <span id="start-date">1</span>
+            <span> - </span>
+            <span id="end-date">2</span>
+          </div>
+        </li>
+        <li>
+          <div>Score: <span id="score">--</span></div>
+        </li>
+      </ul>
+    </div>
+    <br />
+  </section>
+
+  <h2>Skills</h2>
+  <div>
+    <ul>
+      <li>
+        <h3>Frontend Developement</h3>
+      </li>
+      <li>
+        <h3>Django Framework</h3>
+      </li>
+      <li>
+        <h3>React.js</h3>
+      </li>
+      <li>
+        <h3>Git</h3>
+      </li>
+    </ul>
+  </div>
+
+  <!-- <h2>Projects</h2>
+  <h3>SpendWise - An Expense Tracking Webapp</h3>
+  <p>
+    With SpendWise, students can effortlessly monitor their expenditures,
+    categorize them, and set budgets accordingly. It's a handy tool that
+    promotes financial literacy and responsible spending habits among
+    students.<br />
+    SpendWise
+    <a href="https://github.com/rajeevtapadia/EDI2-SpendWise-v2-django">Github Repository</a>
+    and <a href="rajeevtapadia.pythonanywhere.com">Webapp</a>
+  </p> -->
+
+  <!-- <h2>Awards</h2>
+  <table>
+    <tr>
+      <td>Code Wizard Award</td>
+      <td>October 15, 2023</td>
+      <td>
+        This prestigious award is presented to the first-year computer science
+        student who demonstrates exceptional problem-solving skills,
+        innovative thinking, and an impressive ability to write efficient and
+        elegant code.
+      </td>
+    </tr>
+    <tr>
+      <td>Binary Brilliance Award</td>
+      <td>October 15, 2023</td>
+      <td>
+        This distinguished award recognizes the first-year computer science
+        student who exhibits outstanding mastery of the fundamental principles
+        of computer science
+      </td>
+    </tr>
+  </table> -->
 
   <!-- Button trigger modal -->
   <button type="button" id="edit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Edit
+    <i class="bi bi-pencil-square"></i>
   </button>
 
   <!-- Modal -->
@@ -106,7 +123,9 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Enter Your Details</h1>
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">
+            Enter Your Details
+          </h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -116,11 +135,11 @@
               <h2 class="section-header">Personal Details</h2>
               <div class="form-group">
                 <label for="formGroupExampleInput">Full Name</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Full Name">
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Full Name" />
               </div>
               <div class="form-group">
                 <label for="formGroupExampleInput2">College</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="College">
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="College" />
               </div>
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">Residencial Address</label>
@@ -128,11 +147,11 @@
               </div>
               <div class="form-group">
                 <label for="formGroupExampleInput2">Mobile No</label>
-                <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Mobile No">
+                <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Mobile No" />
               </div>
               <div class="form-group">
                 <label for="formGroupExampleInput2">Email</label>
-                <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="Email">
+                <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="Email" />
               </div>
               <div class="input-group mb-3 form-group">
                 <label for="">Upload Your Photo</label>
@@ -140,7 +159,7 @@
                   <!-- <span class="input-group-text">Upload</span> -->
                 </div>
                 <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="inputGroupFile01">
+                  <input type="file" class="custom-file-input" id="inputGroupFile01" />
                   <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                 </div>
               </div>
@@ -161,35 +180,40 @@
               <div>
                 <div class="form-group">
                   <label for="formGroupExampleInput2">School</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput2">
+                  <input type="text" class="form-control" id="formGroupExampleInput2" />
                 </div>
                 <div class="form-group">
                   <label for="formGroupExampleInput2">Degree</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput2">
+                  <input type="text" class="form-control" id="formGroupExampleInput2" />
                 </div>
                 <div class="form-group">
                   <label for="formGroupExampleInput2">Start & End Date</label>
-                  <input type="date" class="form-control start-date" id="formGroupExampleInput2">
-                  <input type="date" class="form-control" id="formGroupExampleInput2">
+                  <input type="date" class="form-control start-date" id="formGroupExampleInput2" />
+                  <input type="date" class="form-control" id="formGroupExampleInput2" />
                 </div>
                 <div class="form-group">
                   <label for="formGroupExampleInput2">City</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput2">
+                  <input type="text" class="form-control" id="formGroupExampleInput2" />
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1" />
                   <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div>
               </div>
-              <button class='form-btn btn btn-outline-secondary'>Add Education</button>
+              <button class="form-btn btn btn-outline-secondary">
+                Add Education
+              </button>
             </section>
 
             <section class="form-sec">
               <h2 class="section-header">Skills</h2>
               <div class="form-group">
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="eg. Web Developement">
+                <input type="text" class="form-control" id="formGroupExampleInput2"
+                  placeholder="eg. Web Developement" />
               </div>
-              <button class='form-btn btn btn-outline-secondary'>Add Skills</button>
+              <button class="form-btn btn btn-outline-secondary">
+                Add Skills
+              </button>
             </section>
             <section class="form-sec">
               <h2 class="section-header">Languages</h2>
@@ -203,42 +227,46 @@
                 <option value="Japanease">Japanease</option>
                 <option value="Chinese">Chinese</option>
               </select>
-              <br>
+              <br />
               <!-- might implement later -->
               <!-- <lable>Proficiency</lable> -->
-              <button class='form-btn btn btn-outline-secondary'>Add Language</button>
+              <button class="form-btn btn btn-outline-secondary">
+                Add Language
+              </button>
             </section>
             <section class="form-sec">
               <h2 class="section-header">Links</h2>
               <div class="form-group">
                 <!-- <label for="formGroupExampleInput2">College</label> -->
-                <input type="url" class="form-control" id="formGroupExampleInput2" placeholder="">
+                <input type="url" class="form-control" id="formGroupExampleInput2" placeholder="" />
               </div>
-              <button class='form-btn btn btn-outline-secondary'>Add Skills</button>
+              <button class="form-btn btn btn-outline-secondary">
+                Add Skills
+              </button>
             </section>
           </form>
           <!-- form end-->
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
           <button type="button" class="btn btn-primary">Submit</button>
         </div>
       </div>
     </div>
   </div>
 
-
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
 
   <script>
-  //  to show modal on load
-  window.addEventListener('load', (e) => {
-    const editbtn = document.getElementById('edit')
-    editbtn.click();
-  })
+      //  to show modal on load
+      // window.addEventListener('load', (e) => {
+      //   const editbtn = document.getElementById('edit')
+      //   editbtn.click();
+      // })
   </script>
 </body>
 
