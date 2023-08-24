@@ -17,9 +17,9 @@
   <section id="personal">
     <div class="header">
       <img src="assets/profile photo stock.jpg" class="profile" height="140px" />
-      <h1 class="name resume-field" id="name">Rajeev Tapadia</h1>
+      <h1 class="name resume-field" id="name">--</h1>
     </div>
-    <h3 id="college resume-field">Vishwakarma Institute of Technology Pune</h3>
+    <h3 class="resume-field" id="college">--</h3>
     <br />
     <p>Address: <span class="resume-field" id="address">--</span></p>
     <p>Mobile: <span class="resume-field" id="phone">--</span></p>
@@ -29,7 +29,7 @@
 
   <section id="aboutme">
     <h2>About Me</h2>
-    <p class="description resume-field">--</p>
+    <p class="description resume-field" id="description">--</p>
     <br />
   </section>
 
@@ -136,23 +136,23 @@
               <h2 class="section-header">Personal Details</h2>
               <div class="form-group">
                 <label for="formGroupExampleInput">Full Name</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Full Name" />
+                <input type="text" class="form-control form-field" id="name" placeholder="Full Name" />
               </div>
               <div class="form-group">
                 <label for="formGroupExampleInput2">College</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="College" />
+                <input type="text" class="form-control form-field" id="college" placeholder="College" />
               </div>
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">Residencial Address</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control form-field" id="address" rows="3"></textarea>
               </div>
               <div class="form-group">
                 <label for="formGroupExampleInput2">Mobile No</label>
-                <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Mobile No" />
+                <input type="number" class="form-control form-field" id="phone" placeholder="Mobile No" />
               </div>
               <div class="form-group">
                 <label for="formGroupExampleInput2">Email</label>
-                <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="Email" />
+                <input type="email" class="form-control form-field" id="email" placeholder="Email" />
               </div>
               <div class="input-group mb-3 form-group">
                 <label for="">Upload Your Photo</label>
@@ -171,7 +171,7 @@
               <div class="form-group">
                 <label for="exampleFormControlTextarea1"><small>Write 2-4 short & energetic sentences to interest the
                     reader</small></label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control form-field" id="description" rows="3"></textarea>
               </div>
             </section>
 
@@ -252,7 +252,7 @@
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
             Close
           </button>
-          <button type="button" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-primary" onclick="generate()">Submit</button>
         </div>
       </div>
     </div>
