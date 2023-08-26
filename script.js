@@ -14,17 +14,29 @@ console.log(formData);
 
 
 // save all data to localstorage
+const saveData = (formFields) => {
+    // const formFields = document.getElementsByClassName('form-field')
+    Array.from(formFields).forEach((element) => {
+        console.log(element)
+        localStorage.setItem(element.id, element.value)
+    })
+}
 
 
 // retrive data form local storage
-
+const getData = () => {
+    Array.from(formData).forEach((element) => {
+        element.value = localStorage.getItem(element.id)
+    })
+}
 
 // generate resume
 const generate = () => {
+    const formFields = document.getElementsByClassName('form-field')
+    saveData(formFields)
     Array.from(resumeFields).forEach(element => {
-        console.log(element)
-        // if(!formData[element.id])
-            element.innerText = formData[element.id].value
+        element.innerText = formFields[element.id].value
     });
 }
 // generate()
+getData()
