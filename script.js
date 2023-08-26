@@ -39,9 +39,11 @@ const generate = () => {
     const skillContainer = document.getElementById('skill-container')
     let skills = document.getElementById('form-skills').value.split(',')
     skills = skills.map(elem => elem.trim())
+    var skillList = []
     skills.forEach(skill => {
-        skillContainer.innerHTML += `<li><h3>${skill}</h3></li>`
+        skillList.push(`<li><h3>${skill}</h3></li>`) 
     })
+    skillContainer.innerHTML = skillList.join('')
 }
 
 // eventlistner for enter
