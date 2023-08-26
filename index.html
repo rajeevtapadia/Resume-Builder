@@ -37,18 +37,18 @@
     <h2>Education</h2>
     <div id="edu-container">
       <h3>
-        <span class="resume-field" id="school">VIT</span>
-        <span class="resume-field" id="city">Pune</span>
+        <span class="resume-field" id="school">--</span>
+        <span class="resume-field" id="city">--</span>
       </h3>
       <ul>
         <li>
-          <div class="resume-field" id="degree">BTech in Information Technology</div>
+          <div class="resume-field" id="degree"></div>
         </li>
         <li>
           <div>
-            <span class="resume-field" id="start-date">1</span>
+            <span class="resume-field" id="start-date"></span>
             <span> - </span>
-            <span class="resume-field" id="end-date">2</span>
+            <span class="resume-field" id="end-date"></span>
           </div>
         </li>
         <li>
@@ -61,19 +61,7 @@
 
   <h2>Skills</h2>
   <div>
-    <ul>
-      <li>
-        <h3>Frontend Developement</h3>
-      </li>
-      <li>
-        <h3>Django Framework</h3>
-      </li>
-      <li>
-        <h3>React.js</h3>
-      </li>
-      <li>
-        <h3>Git</h3>
-      </li>
+    <ul id="skill-container">
     </ul>
   </div>
 
@@ -139,7 +127,7 @@
                 <input type="text" class="form-control form-field" id="name" placeholder="Full Name" />
               </div>
               <div class="form-group">
-                <label for="formGroupExampleInput2">College</label>
+                <label for="formGroupExampleInput2">Year & College</label>
                 <input type="text" class="form-control form-field" id="college" placeholder="College" />
               </div>
               <div class="form-group">
@@ -181,20 +169,24 @@
               <div>
                 <div class="form-group">
                   <label for="formGroupExampleInput2">School</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput2" />
+                  <input type="text" class="form-control form-field" id="school" />
                 </div>
                 <div class="form-group">
                   <label for="formGroupExampleInput2">Degree</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput2" />
+                  <input type="text" class="form-control form-field" id="degree" />
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Score</label>
+                  <input type="text" class="form-control form-field" id="score" />
                 </div>
                 <div class="form-group">
                   <label for="formGroupExampleInput2">Start & End Date</label>
-                  <input type="date" class="form-control start-date" id="formGroupExampleInput2" />
-                  <input type="date" class="form-control" id="formGroupExampleInput2" />
+                  <input type="date" class="form-control form-field" id="start-date" placeholder="dd/mm/yyyy"/>
+                  <input type="date" class="form-control form-field" id="end-date" placeholder="dd/mm/yyyy"/>
                 </div>
                 <div class="form-group">
                   <label for="formGroupExampleInput2">City</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput2" />
+                  <input type="text" class="form-control form-field" id="city" />
                 </div>
                 <div class="form-check">
                   <input type="checkbox" class="form-check-input" id="exampleCheck1" />
@@ -209,12 +201,10 @@
             <section class="form-sec">
               <h2 class="section-header">Skills</h2>
               <div class="form-group">
-                <input type="text" class="form-control" id="formGroupExampleInput2"
+                <small>Add your skills seperated by a comma</small>
+                <input type="text" class="form-control" id="form-skills"
                   placeholder="eg. Web Developement" />
               </div>
-              <button class="form-btn btn btn-outline-secondary">
-                Add Skills
-              </button>
             </section>
             <section class="form-sec">
               <h2 class="section-header">Languages</h2>
@@ -264,10 +254,10 @@
 
   <script>
       //  to show modal on load
-      // window.addEventListener('load', (e) => {
-      //   const editbtn = document.getElementById('edit')
-      //   editbtn.click();
-      // })
+      window.addEventListener('load', (e) => {
+        const editbtn = document.getElementById('edit')
+        editbtn.click();
+      })
   </script>
   <script src="script.js"></script>
 </body>

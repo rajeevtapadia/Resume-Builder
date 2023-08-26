@@ -17,7 +17,6 @@ console.log(formData);
 const saveData = (formFields) => {
     // const formFields = document.getElementsByClassName('form-field')
     Array.from(formFields).forEach((element) => {
-        console.log(element)
         localStorage.setItem(element.id, element.value)
     })
 }
@@ -25,7 +24,7 @@ const saveData = (formFields) => {
 
 // retrive data form local storage
 const getData = () => {
-    Array.from(formData).forEach((element) => {
+    Array.from(formData).forEach(element => {
         element.value = localStorage.getItem(element.id)
     })
 }
@@ -37,6 +36,12 @@ const generate = () => {
     Array.from(resumeFields).forEach(element => {
         element.innerText = formFields[element.id].value
     });
+    const skillContainer = document.getElementById('skill-container')
+    let skills = document.getElementById('form-skills').value.split(',')
+    skills = skills.map(elem => elem.trim())
+    skills.forEach(skill => {
+        skillContainer.innerHTML += `<li><h3>${skill}</h3></li>`
+    })
 }
 // generate()
 getData()
