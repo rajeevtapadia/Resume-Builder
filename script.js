@@ -43,5 +43,13 @@ const generate = () => {
         skillContainer.innerHTML += `<li><h3>${skill}</h3></li>`
     })
 }
+
+// eventlistner for enter
+document.addEventListener('keyup', e => {
+    if(e.key === 'Enter'){
+        generate()
+        document.getElementById('close-btn').click()
+    }
+})
 // generate()
 getData()

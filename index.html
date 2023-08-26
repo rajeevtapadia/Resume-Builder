@@ -106,7 +106,6 @@
   </button>
 
   <!-- Modal -->
-  <!-- removed fade from class -->
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -115,7 +114,7 @@
           <h1 class="modal-title fs-5" id="staticBackdropLabel">
             Enter Your Details
           </h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" id="close-btn" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <!-- form for taking user data -->
@@ -128,11 +127,11 @@
               </div>
               <div class="form-group">
                 <label for="formGroupExampleInput2">Year & College</label>
-                <input type="text" class="form-control form-field" id="college" placeholder="College" />
+                <input type="text" class="form-control form-field" id="college" placeholder="eg. SY VIT" />
               </div>
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">Residencial Address</label>
-                <textarea class="form-control form-field" id="address" rows="3"></textarea>
+                <textarea class="form-control form-field" id="address" rows="3" placeholder="eg. my mom's basement"></textarea>
               </div>
               <div class="form-group">
                 <label for="formGroupExampleInput2">Mobile No</label>
@@ -203,7 +202,7 @@
               <div class="form-group">
                 <small>Add your skills seperated by a comma</small>
                 <input type="text" class="form-control" id="form-skills"
-                  placeholder="eg. Web Developement" />
+                  placeholder="eg. centering a div or using vim" />
               </div>
             </section>
             <section class="form-sec">
@@ -242,7 +241,7 @@
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
             Close
           </button>
-          <button type="button" class="btn btn-primary" onclick="generate();saveData();">Submit</button>
+          <button type="button" class="btn btn-primary" onclick="generate();">Submit</button>
         </div>
       </div>
     </div>
@@ -255,8 +254,7 @@
   <script>
       //  to show modal on load
       window.addEventListener('load', (e) => {
-        const editbtn = document.getElementById('edit')
-        editbtn.click();
+        document.getElementById('edit').click()
       })
   </script>
   <script src="script.js"></script>
