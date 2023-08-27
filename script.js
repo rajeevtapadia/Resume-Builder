@@ -10,7 +10,6 @@ console.log(resumeFields)
 // get all form data
 const formData = document.getElementsByClassName('form-field')
 console.log(formData);
-// console.log(formData['name']);
 
 
 // save all data to localstorage
@@ -50,7 +49,7 @@ const generate = () => {
 document.addEventListener('keyup', e => {
     if(e.key === 'Enter'){
         generate()
-        document.getElementById('close-btn').click()
+        // document.getElementById('close-btn').click()
     }
 })
 // generate()
