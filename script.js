@@ -40,9 +40,19 @@ const generate = () => {
     skills = skills.map(elem => elem.trim())
     var skillList = []
     skills.forEach(skill => {
-        skillList.push(`<li><h3>${skill}</h3></li>`)
+        skillList.push(`<li><h4>${skill}</h4></li>`)
     })
     skillContainer.innerHTML = skillList.join('')
+
+    // links
+    const linkCont = document.getElementById('link-container')
+    let link = document.getElementById('link').value.split(',')
+    link = link.map(elem => elem.trim())
+    let linkList = []
+    link.forEach(elem => {
+        linkList.push(`<li><h4><a href='${elem}'>${elem}</h4></li>`)
+    })
+    linkCont.innerHTML = linkList.join('')
 }
 
 // eventlistner for enter

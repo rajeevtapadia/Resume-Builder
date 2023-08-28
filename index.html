@@ -67,40 +67,11 @@
     </ul>
   </div>
 
-  <!-- <h2>Projects</h2>
-  <h3>SpendWise - An Expense Tracking Webapp</h3>
-  <p>
-    With SpendWise, students can effortlessly monitor their expenditures,
-    categorize them, and set budgets accordingly. It's a handy tool that
-    promotes financial literacy and responsible spending habits among
-    students.<br />
-    SpendWise
-    <a href="https://github.com/rajeevtapadia/EDI2-SpendWise-v2-django">Github Repository</a>
-    and <a href="rajeevtapadia.pythonanywhere.com">Webapp</a>
-  </p> -->
-
-  <!-- <h2>Awards</h2>
-  <table>
-    <tr>
-      <td>Code Wizard Award</td>
-      <td>October 15, 2023</td>
-      <td>
-        This prestigious award is presented to the first-year computer science
-        student who demonstrates exceptional problem-solving skills,
-        innovative thinking, and an impressive ability to write efficient and
-        elegant code.
-      </td>
-    </tr>
-    <tr>
-      <td>Binary Brilliance Award</td>
-      <td>October 15, 2023</td>
-      <td>
-        This distinguished award recognizes the first-year computer science
-        student who exhibits outstanding mastery of the fundamental principles
-        of computer science
-      </td>
-    </tr>
-  </table> -->
+  <h2>Links</h2>
+  <div>
+    <ul id="link-container">
+    </ul>
+  </div>
 
   <!-- Button trigger modal -->
   <button type="button" id="edit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -198,7 +169,8 @@
                   <hr>
                 </div>
               </div>
-              <button type="button" class="form-btn btn btn-outline-secondary" onclick="addEduSec()">
+              <button type="button" class="form-btn btn btn-outline-secondary" 
+                onclick="addEduSec()">
                 Add Education
               </button>
             </section>
@@ -207,38 +179,17 @@
               <h2 class="section-header">Skills</h2>
               <div class="form-group">
                 <small>Add your skills seperated by a comma</small>
-                <input type="text" class="form-control" id="form-skills"
-                  placeholder="eg. centering a div or using vim" />
+                <input type="text" class="form-control form-field" 
+                  id="form-skills" placeholder="eg. centering a div or using vim" />
               </div>
             </section>
-            <!-- <section class="form-sec">
-              <h2 class="section-header">Languages</h2>
-              <label for="lang">Languages</label>
-              <select name="lang">
-                <option value="English">English</option>
-                <option value="Hindi">Hindi</option>
-                <option value="Marathi">Marathi</option>
-                <option value="German">German</option>
-                <option value="Spanish">Spanish</option>
-                <option value="Japanease">Japanease</option>
-                <option value="Chinese">Chinese</option>
-              </select>
-              <br />
-              <!-- might implement later -->
-              <!-- <lable>Proficiency</lable> -->
-              <button class="form-btn btn btn-outline-secondary">
-                Add Language
-              </button>
-            </section> -->
             <section class="form-sec">
               <h2 class="section-header">Links</h2>
               <div class="form-group">
-                <!-- <label for="formGroupExampleInput2">College</label> -->
-                <input type="url" class="form-control" id="formGroupExampleInput2" placeholder="" />
+                <small>Add your skills seperated by a comma</small>
+                <input type="url" class="form-control form-field" 
+                  id="link" placeholder="eg. github.com/koolkitty" />
               </div>
-              <button class="form-btn btn btn-outline-secondary">
-                Add Skills
-              </button>
             </section>
           </form>
           <!-- form end-->
