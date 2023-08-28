@@ -26,3 +26,8 @@ td{
     bottom: 2vh;
     right: 10vh;
 }
+@media print{
+    #printButton, #edit{
+        display: none;
+    }
+}

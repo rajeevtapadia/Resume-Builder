@@ -1,6 +1,6 @@
 // get all resume fields
-    // common resume-field class to get the elements
-    // unique id to access single elements
+// common resume-field class to get the elements
+// unique id to access single elements
 const resumeFields = document.getElementsByClassName('resume-field')
 console.log(resumeFields)
 
@@ -40,17 +40,36 @@ const generate = () => {
     skills = skills.map(elem => elem.trim())
     var skillList = []
     skills.forEach(skill => {
-        skillList.push(`<li><h3>${skill}</h3></li>`) 
+        skillList.push(`<li><h3>${skill}</h3></li>`)
     })
     skillContainer.innerHTML = skillList.join('')
 }
 
 // eventlistner for enter
 document.addEventListener('keyup', e => {
-    if(e.key === 'Enter'){
+    if (e.key === 'Enter') {
         generate()
         // document.getElementById('close-btn').click()
     }
 })
+
+// adding more fields in form
+const addEduSec = () => {
+    // resume
+    const eduSec = document.getElementById('edu-sec-resume')
+    // const container = document.getElementById('edu-container-resume')
+    // container.appendChild(eduSec)
+
+    // // form
+    const eduSecForm = document.getElementById('edu-sec-form');
+    const containerForm = document.getElementById('edu-container-form');
+
+    const copiedEduSecForm = eduSecForm.cloneNode(true);
+
+    const inputFields = copiedEduSecForm.querySelectorAll('input');
+    inputFields.forEach(input => input.value = '');
+
+    containerForm.appendChild(copiedEduSecForm);
+}
 // generate()
 getData()
