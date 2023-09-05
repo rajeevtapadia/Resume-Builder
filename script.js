@@ -11,6 +11,9 @@ console.log(resumeFields)
 const formData = document.getElementsByClassName('form-field')
 console.log(formData);
 
+// shit
+const ed = document.getElementsByClassName('ed')
+console.log(ed)
 
 // save all data to localstorage
 const saveData = (formFields) => {
@@ -20,6 +23,23 @@ const saveData = (formFields) => {
     })
 }
 
+const saveEdu = () => {
+    const ed = document.getElementsByClassName('ed')
+    console.log(ed)
+    let eduArr = []
+    for (let i = 0; i < ed.length/6; i++) {
+        eduArr.push({
+            school: ed[i*6+0].value,
+            degree: ed[i*6+1].value,
+            score: ed[i*6+2].value,
+            start: ed[i*6+3].value,
+            end: ed[i*6+4].value,
+            city: ed[i*6+5].value
+        })
+    }
+    localStorage.setItem('edu', JSON.stringify(eduArr));
+
+}
 
 // retrive data form local storage
 const getData = () => {
@@ -32,6 +52,7 @@ const getData = () => {
 const generate = () => {
     const formFields = document.getElementsByClassName('form-field')
     saveData(formFields)
+    saveEdu()
     Array.from(resumeFields).forEach(element => {
         element.innerText = formFields[element.id].value
     });
