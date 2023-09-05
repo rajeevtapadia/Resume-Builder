@@ -44,14 +44,15 @@ const saveEdu = () => {
     const ed = document.getElementsByClassName('ed')
     console.log(ed)
     let eduArr = []
-    for (let i = 0; i < ed.length/6; i++) {
+    for (let i = 0; i < ed.length / 6; i++) {
+        if(ed[i * 6 + 0].value !== '')
         eduArr.push({
-            school: ed[i*6+0].value,
-            degree: ed[i*6+1].value,
-            score: ed[i*6+2].value,
-            start: ed[i*6+3].value,
-            end: ed[i*6+4].value,
-            city: ed[i*6+5].value
+            school: ed[i * 6 + 0].value,
+            degree: ed[i * 6 + 1].value,
+            score: ed[i * 6 + 2].value,
+            start: ed[i * 6 + 3].value,
+            end: ed[i * 6 + 4].value,
+            city: ed[i * 6 + 5].value
         })
     }
     localStorage.setItem('edu', JSON.stringify(eduArr));
@@ -69,15 +70,14 @@ const getData = () => {
     console.log(eduArr)
     eduArr.forEach(e => addEduSec())
     const ed = document.getElementsByClassName('ed')
-    for (let i = 0; i < (ed.length/6)-1; i++) {
-        ed[i*6+0].value = eduArr[i].school 
-        ed[i*6+1].value = eduArr[i].degree 
-        ed[i*6+2].value = eduArr[i].score 
-        ed[i*6+3].value = eduArr[i].start 
-        ed[i*6+4].value = eduArr[i].end 
-        ed[i*6+5].value = eduArr[i].city 
+    for (let i = 0; i < (ed.length / 6) - 1; i++) {
+        ed[i * 6 + 0].value = eduArr[i].school
+        ed[i * 6 + 1].value = eduArr[i].degree
+        ed[i * 6 + 2].value = eduArr[i].score
+        ed[i * 6 + 3].value = eduArr[i].start
+        ed[i * 6 + 4].value = eduArr[i].end
+        ed[i * 6 + 5].value = eduArr[i].city
     }
-
 }
 
 // generate resume
@@ -88,6 +88,8 @@ const generate = () => {
     Array.from(resumeFields).forEach(element => {
         element.innerText = formFields[element.id].value
     });
+
+    //skills
     const skillContainer = document.getElementById('skill-container')
     let skills = document.getElementById('form-skills').value.split(',')
     skills = skills.map(elem => elem.trim())
@@ -106,6 +108,34 @@ const generate = () => {
         linkList.push(`<li><h4><a href='${elem}'>${elem}</h4></li>`)
     })
     linkCont.innerHTML = linkList.join('')
+
+    // edu
+    let eduArr = JSON.parse(localStorage.getItem('edu'))
+    const eduResume = document.getElementById('edu-container-resume')
+    eduResume.innerHTML = ''
+    eduArr.forEach(elem => {
+        const div = document.createElement('div')
+        div.innerHTML = `
+        <div id="edu-sec-resume">
+        <h3>
+        <span class="resume-field" id="school">${elem.school}</span>
+        <span class="resume-field" id="city">${elem.city}</span>
+        </h3>
+        <ul>
+        <li><div class="resume-field" id="degree">${elem.degree}</div></li>
+        <li>
+        <div>
+        <span class="resume-field" id="start-date">${elem.start}</span>
+        <span> - </span>
+        <span class="resume-field" id="end-date">${elem.end}</span>
+        </div>
+        </li>
+        <li><div>Score: <span class="resume-field" id="score">${elem.score}</span></div></li>
+        </ul>
+        </div>
+    `
+        eduResume.appendChild(div)
+    })
 }
 
 // eventlistner for enter
