@@ -23,6 +23,23 @@ const saveData = (formFields) => {
     })
 }
 
+// adding more fields in form
+const addEduSec = () => {
+    // resume
+    const eduSec = document.getElementById('edu-sec-resume')
+
+    // // form
+    const eduSecForm = document.getElementById('edu-sec-form');
+    const containerForm = document.getElementById('edu-container-form');
+
+    const copiedEduSecForm = eduSecForm.cloneNode(true);
+
+    const inputFields = copiedEduSecForm.querySelectorAll('input');
+    inputFields.forEach(input => input.value = '');
+
+    containerForm.appendChild(copiedEduSecForm);
+}
+
 const saveEdu = () => {
     const ed = document.getElementsByClassName('ed')
     console.log(ed)
@@ -46,6 +63,21 @@ const getData = () => {
     Array.from(formData).forEach(element => {
         element.value = localStorage.getItem(element.id)
     })
+    // get edu
+    let eduArr = localStorage.getItem('edu')
+    eduArr = JSON.parse(eduArr);
+    console.log(eduArr)
+    eduArr.forEach(e => addEduSec())
+    const ed = document.getElementsByClassName('ed')
+    for (let i = 0; i < (ed.length/6)-1; i++) {
+        ed[i*6+0].value = eduArr[i].school 
+        ed[i*6+1].value = eduArr[i].degree 
+        ed[i*6+2].value = eduArr[i].score 
+        ed[i*6+3].value = eduArr[i].start 
+        ed[i*6+4].value = eduArr[i].end 
+        ed[i*6+5].value = eduArr[i].city 
+    }
+
 }
 
 // generate resume
@@ -84,23 +116,6 @@ document.addEventListener('keyup', e => {
     }
 })
 
-// adding more fields in form
-const addEduSec = () => {
-    // resume
-    const eduSec = document.getElementById('edu-sec-resume')
-    // const container = document.getElementById('edu-container-resume')
-    // container.appendChild(eduSec)
 
-    // // form
-    const eduSecForm = document.getElementById('edu-sec-form');
-    const containerForm = document.getElementById('edu-container-form');
-
-    const copiedEduSecForm = eduSecForm.cloneNode(true);
-
-    const inputFields = copiedEduSecForm.querySelectorAll('input');
-    inputFields.forEach(input => input.value = '');
-
-    containerForm.appendChild(copiedEduSecForm);
-}
 // generate()
 getData()
