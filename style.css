@@ -7,10 +7,23 @@ body{
     margin: 50px auto;
     box-shadow: 0 0 20px #00000033;
     padding: 50px 70px;
+    aspect-ratio: 1/1.41;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+
+}
+.left{
+    width: 70%;
+}
+.right{
+
 }
 .header{
     display: flex;
     align-items: center;
+    margin-bottom: 30px;
 }
 .profile{
     size: 100px;

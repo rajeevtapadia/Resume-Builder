@@ -16,45 +16,52 @@
 
 <body>
   <div class="page" id="page">
-  <section id="personal">
-    <div class="header">
-      <img src="assets/profile photo stock.jpg" class="profile" height="140px" />
-      <h1 class="name resume-field" id="name">--</h1>
-    </div>
-    <h3 class="resume-field" id="college">--</h3>
-    <br />
-    <p>Address: <span class="resume-field" id="address">--</span></p>
-    <p>Mobile: <span class="resume-field" id="phone">--</span></p>
-    <p>Email: <span class="resume-field" id="email">--</span></p>
-    <br />
-  </section>
+    <section id="personal">
+      <div class="header">
+        <img src="assets/profile photo stock.jpg" class="profile" height="140px" />
+        <h1 class="name resume-field" id="name">--</h1>
+      </div>
+    </section>
+    <div class="content">
+      <div class="left">
+        <h3 class="resume-field" id="college">--</h3>
+        <br />
+        <p>Address: <span class="resume-field" id="address">--</span></p>
+        <p>Mobile: <span class="resume-field" id="phone">--</span></p>
+        <p>Email: <span class="resume-field" id="email">--</span></p>
+        <br />
 
-  <section id="aboutme">
-    <h2>About Me</h2>
-    <p class="description resume-field" id="description">--</p>
-    <br />
-  </section>
-
-  <section id="edu">
-    <h2>Education</h2>
-    <div id="edu-container-resume">
+      <section id="aboutme">
+        <h2>About Me</h2>
+        <p class="description resume-field" id="description">--</p>
+        <br />
+      </section>
       
-    </div>
-    <br />
-  </section>
+      <section id="edu">
+        <h2>Education</h2>
+        <div id="edu-container-resume">
 
-  <h2>Skills</h2>
-  <div>
-    <ul id="skill-container">
-    </ul>
+      </div>
+      <br />
+    </section>
   </div>
 
-  <h2>Links</h2>
-  <div>
-    <ul id="link-container">
-    </ul>
+  <div class="right">
+
+    <h2>Skills</h2>
+    <div>
+      <ul id="skill-container">
+      </ul>
+    </div>
+    
+    <h2>Links</h2>
+    <div>
+      <ul id="link-container">
+      </ul>
+    </div>
   </div>
 </div>
+  </div>
 
 
   <!-- Button trigger modal -->
@@ -149,8 +156,7 @@
                   <hr>
                 </div>
               </div>
-              <button type="button" class="form-btn btn btn-outline-secondary" 
-                onclick="addEduSec()">
+              <button type="button" class="form-btn btn btn-outline-secondary" onclick="addEduSec()">
                 Add Education
               </button>
             </section>
@@ -159,16 +165,15 @@
               <h2 class="section-header">Skills</h2>
               <div class="form-group">
                 <small>Add your skills seperated by a comma</small>
-                <input type="text" class="form-control form-field" 
-                  id="form-skills" placeholder="eg. centering a div or using vim" />
+                <input type="text" class="form-control form-field" id="form-skills"
+                  placeholder="eg. centering a div or using vim" />
               </div>
             </section>
             <section class="form-sec">
               <h2 class="section-header">Links</h2>
               <div class="form-group">
                 <small>Add your skills seperated by a comma</small>
-                <input type="url" class="form-control form-field" 
-                  id="link" placeholder="eg. github.com/koolkitty" />
+                <input type="url" class="form-control form-field" id="link" placeholder="eg. github.com/koolkitty" />
               </div>
             </section>
           </form>
@@ -200,38 +205,38 @@
   </script>
   <script src="script.js"></script>
   <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const exportPdfButton = document.getElementById('printButton');
+    document.addEventListener('DOMContentLoaded', function () {
+      const exportPdfButton = document.getElementById('printButton');
 
-  exportPdfButton.addEventListener('click', function () {
-    const resumeContainer = document.getElementById('page'); // Replace with your resume's container ID
-    const pdfOptions = {
-      margin: 10,
-      filename: 'resume.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2 },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-    };
+      exportPdfButton.addEventListener('click', function () {
+        const resumeContainer = document.getElementById('page'); // Replace with your resume's container ID
+        const pdfOptions = {
+          margin: 10,
+          filename: 'resume.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2 },
+          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        };
 
-    html2pdf().from(resumeContainer).set(pdfOptions).outputPdf().then(function (pdf) {
-      const blob = new Blob([pdf], { type: 'application/pdf' });
-      const url = URL.createObjectURL(blob);
+        html2pdf().from(resumeContainer).set(pdfOptions).outputPdf().then(function (pdf) {
+          const blob = new Blob([pdf], { type: 'application/pdf' });
+          const url = URL.createObjectURL(blob);
 
-      // Create a link and trigger the download
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'resume.pdf';
-      a.style.display = 'none';
-      document.body.appendChild(a);
-      a.click();
-      URL.revokeObjectURL(url);
+          // Create a link and trigger the download
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'resume.pdf';
+          a.style.display = 'none';
+          document.body.appendChild(a);
+          a.click();
+          URL.revokeObjectURL(url);
+        });
+      });
     });
-  });
-});
 
 
   </script>
-  
+
 </body>
 
 
