@@ -11,9 +11,6 @@ console.log(resumeFields)
 const formData = document.getElementsByClassName('form-field')
 console.log(formData);
 
-// shit
-const ed = document.getElementsByClassName('ed')
-console.log(ed)
 
 // save all data to localstorage
 const saveData = (formFields) => {
@@ -136,6 +133,9 @@ const generate = () => {
     `
         eduResume.appendChild(div)
     })
+
+    // profile photo
+    document.getElementById('profile').src = formData.photo.value
 }
 
 // eventlistner for enter
