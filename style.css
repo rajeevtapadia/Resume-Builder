@@ -3,6 +3,7 @@ body{
     margin: 50px auto;
 }
 .page{
+    position: relative;
     max-width: 900px;
     margin: 50px auto;
     box-shadow: 0 0 20px #00000033;
@@ -17,8 +18,20 @@ body{
 .left{
     width: 70%;
 }
+.test::after{
+    content: '';
+    background-color: rgb(146, 146, 215);
+    display: block;
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+
+}
 .right{
-    /* margin-left: 50px; */
     padding: 0 50px;
 }
 .header{
@@ -61,6 +74,29 @@ td{
     right: 10vh;
     width: 60px;
     aspect-ratio: 1/1;
+    transition: 500ms;
+}
+@media only screen and (max-width: 600px) {
+    .content{
+        flex-direction: column;
+    }
+    .right{
+        padding: 0;
+    }
+    #printButton{
+        bottom: 9vh;
+        right: 3vh;
+
+    }
+    .test::after{
+        background-color: white;
+    }
+  }
+@media only screen and (max-width: 850px){
+    .right{
+        margin-right: 0px;
+        padding-right: 0;
+    }
 }
 @media print{
     #printButton, #edit{

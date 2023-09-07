@@ -16,221 +16,223 @@
 
 <body>
   <div class="page" id="page">
-    <section id="personal">
-      <div class="header">
-        <img src="assets/profile photo stock.jpg" class="profile" id="profile" height="140px" />
-        <h1 class="name resume-field" id="name">--</h1>
-      </div>
-    </section>
-    <div class="content">
-      <div class="left">
-        <h3 class="resume-field" id="college">--</h3>
-        <br />
-        <p>Address: <span class="resume-field" id="address">--</span></p>
-        <p>Mobile: <span class="resume-field" id="phone">--</span></p>
-        <p>Email: <span class="resume-field" id="email">--</span></p>
-        <br />
-
-      <section id="aboutme">
-        <h2>About Me</h2>
-        <p class="description resume-field" id="description">--</p>
-        <br />
+    <div class="test">
+      <section id="personal">
+        <div class="header">
+          <img src="assets/profile photo stock.jpg" class="profile" id="profile" height="140px" />
+          <h1 class="name resume-field" id="name">--</h1>
+        </div>
       </section>
-      
-      <section id="edu">
-        <h2>Education</h2>
-        <div id="edu-container-resume">
+      <div class="content">
+        <div class="left">
+          <h3 class="resume-field" id="college">--</h3>
+          <br />
+          <p>Address: <span class="resume-field" id="address">--</span></p>
+          <p>Mobile: <span class="resume-field" id="phone">--</span></p>
+          <p>Email: <span class="resume-field" id="email">--</span></p>
+          <br />
 
-      </div>
-      <br />
-    </section>
-  </div>
+          <section id="aboutme">
+            <h2>About Me</h2>
+            <p class="description resume-field" id="description">--</p>
+            <br />
+          </section>
 
-  <div class="right">
+          <section id="edu">
+            <h2>Education</h2>
+            <div id="edu-container-resume">
 
-    <h2>Skills</h2>
-    <div>
-      <ul id="skill-container">
-      </ul>
-    </div>
-    
-    <h2>Links</h2>
-    <div>
-      <ul id="link-container">
-      </ul>
-    </div>
-  </div>
-</div>
-  </div>
-
-
-  <!-- Button trigger modal -->
-  <button type="button" id="edit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    <i class="bi bi-pencil-square"></i>
-  </button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">
-            Enter Your Details
-          </h1>
-          <button type="button" id="close-btn" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <br />
+          </section>
         </div>
-        <div class="modal-body">
-          <!-- form for taking user data -->
-          <form>
-            <section class="form-sec">
-              <h2 class="section-header">Personal Details</h2>
-              <div class="form-group">
-                <label for="formGroupExampleInput">Full Name</label>
-                <input type="text" class="form-control form-field" id="name" placeholder="Full Name" />
-              </div>
-              <div class="form-group">
-                <label for="formGroupExampleInput2">Year & College</label>
-                <input type="text" class="form-control form-field" id="college" placeholder="eg. SY VIT" />
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlTextarea1">Residencial Address</label>
-                <textarea class="form-control form-field" id="address" rows="3"
-                  placeholder="eg. my mom's basement"></textarea>
-              </div>
-              <div class="form-group">
-                <label for="formGroupExampleInput2">Mobile No</label>
-                <input type="number" class="form-control form-field" id="phone" placeholder="Mobile No" />
-              </div>
-              <div class="form-group">
-                <label for="formGroupExampleInput2">Email</label>
-                <input type="email" class="form-control form-field" id="email" placeholder="Email" />
-              </div>
-              <div class="form-group">
-                <label for="formGroupExampleInput2">Photo</label>
-                <input type="url" class="form-control form-field" id="photo" placeholder="/url/to/photo" />
-              </div>
-              
-            </section>
 
-            <section class="form-sec">
-              <h2 class="section-header">Professional Summary</h2>
-              <div class="form-group">
-                <label for="exampleFormControlTextarea1"><small>Write 2-4 short & energetic sentences to interest the
-                    reader</small></label>
-                <textarea class="form-control form-field" id="description" rows="3"></textarea>
-              </div>
-            </section>
+        <div class="right">
 
-            <section class="form-sec">
-              <h2 class="section-header">Education</h2>
-              <!-- use this div in js and create a button to add more of these -->
-              <div id="edu-container-form">
-                <div id="edu-sec-form">
-                  <div class="form-group">
-                    <label for="formGroupExampleInput2">School</label>
-                    <input type="text" class="form-control form-field ed" id="school" />
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput2">Degree</label>
-                    <input type="text" class="form-control form-field ed" id="degree" />
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput2">Score</label>
-                    <input type="text" class="form-control form-field ed" id="score" />
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput2">Start & End Date</label>
-                    <input type="date" class="form-control form-field ed" id="start-date" placeholder="dd/mm/yyyy" />
-                    <input type="date" class="form-control form-field ed" id="end-date" placeholder="dd/mm/yyyy" />
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput2">City</label>
-                    <input type="text" class="form-control form-field ed" id="city" />
-                  </div>
-                  <hr>
+          <h2>Skills</h2>
+          <div>
+            <ul id="skill-container">
+            </ul>
+          </div>
+
+          <h2>Links</h2>
+          <div>
+            <ul id="link-container">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <!-- Button trigger modal -->
+    <button type="button" id="edit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      <i class="bi bi-pencil-square"></i>
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Enter Your Details
+            </h1>
+            <button type="button" id="close-btn" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- form for taking user data -->
+            <form>
+              <section class="form-sec">
+                <h2 class="section-header">Personal Details</h2>
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Full Name</label>
+                  <input type="text" class="form-control form-field" id="name" placeholder="Full Name" />
                 </div>
-              </div>
-              <button type="button" class="form-btn btn btn-outline-secondary" onclick="addEduSec()">
-                Add Education
-              </button>
-            </section>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Year & College</label>
+                  <input type="text" class="form-control form-field" id="college" placeholder="eg. SY VIT" />
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Residencial Address</label>
+                  <textarea class="form-control form-field" id="address" rows="3"
+                    placeholder="eg. my mom's basement"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Mobile No</label>
+                  <input type="number" class="form-control form-field" id="phone" placeholder="Mobile No" />
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Email</label>
+                  <input type="email" class="form-control form-field" id="email" placeholder="Email" />
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Photo</label>
+                  <input type="url" class="form-control form-field" id="photo" placeholder="/url/to/photo" />
+                </div>
 
-            <section class="form-sec">
-              <h2 class="section-header">Skills</h2>
-              <div class="form-group">
-                <small>Add your skills seperated by a comma</small>
-                <input type="text" class="form-control form-field" id="form-skills"
-                  placeholder="eg. centering a div or using vim" />
-              </div>
-            </section>
-            <section class="form-sec">
-              <h2 class="section-header">Links</h2>
-              <div class="form-group">
-                <small>Add your skills seperated by a comma</small>
-                <input type="url" class="form-control form-field" id="link" placeholder="eg. github.com/koolkitty" />
-              </div>
-            </section>
-          </form>
-          <!-- form end-->
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-            Close
-          </button>
-          <button type="button" class="btn btn-primary" onclick="generate();">Submit</button>
+              </section>
+
+              <section class="form-sec">
+                <h2 class="section-header">Professional Summary</h2>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1"><small>Write 2-4 short & energetic sentences to interest the
+                      reader</small></label>
+                  <textarea class="form-control form-field" id="description" rows="3"></textarea>
+                </div>
+              </section>
+
+              <section class="form-sec">
+                <h2 class="section-header">Education</h2>
+                <!-- use this div in js and create a button to add more of these -->
+                <div id="edu-container-form">
+                  <div id="edu-sec-form">
+                    <div class="form-group">
+                      <label for="formGroupExampleInput2">School</label>
+                      <input type="text" class="form-control form-field ed" id="school" />
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput2">Degree</label>
+                      <input type="text" class="form-control form-field ed" id="degree" />
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput2">Score</label>
+                      <input type="text" class="form-control form-field ed" id="score" />
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput2">Start & End Date</label>
+                      <input type="date" class="form-control form-field ed" id="start-date" placeholder="dd/mm/yyyy" />
+                      <input type="date" class="form-control form-field ed" id="end-date" placeholder="dd/mm/yyyy" />
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput2">City</label>
+                      <input type="text" class="form-control form-field ed" id="city" />
+                    </div>
+                    <hr>
+                  </div>
+                </div>
+                <button type="button" class="form-btn btn btn-outline-secondary" onclick="addEduSec()">
+                  Add Education
+                </button>
+              </section>
+
+              <section class="form-sec">
+                <h2 class="section-header">Skills</h2>
+                <div class="form-group">
+                  <small>Add your skills seperated by a comma</small>
+                  <input type="text" class="form-control form-field" id="form-skills"
+                    placeholder="eg. centering a div or using vim" />
+                </div>
+              </section>
+              <section class="form-sec">
+                <h2 class="section-header">Links</h2>
+                <div class="form-group">
+                  <small>Add your skills seperated by a comma</small>
+                  <input type="url" class="form-control form-field" id="link" placeholder="eg. github.com/koolkitty" />
+                </div>
+              </section>
+            </form>
+            <!-- form end-->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Close
+            </button>
+            <button type="button" class="btn btn-primary" onclick="generate();">Submit</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <button id="printButton" class="btn btn-secondary">
-    <i class="bi bi-printer"></i>
-  </button>
+    <button id="printButton" class="btn btn-secondary">
+      <i class="bi bi-printer"></i>
+    </button>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"></script>
 
-  <script>
-    // to show modal on load
-    window.addEventListener('load', (e) => {
-      document.getElementById('edit').click()
-    })
-  </script>
-  <script src="script.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const exportPdfButton = document.getElementById('printButton');
+    <script>
+      // to show modal on load
+      window.addEventListener('load', (e) => {
+        document.getElementById('edit').click()
+      })
+    </script>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const exportPdfButton = document.getElementById('printButton');
 
-      exportPdfButton.addEventListener('click', function () {
-        const resumeContainer = document.getElementById('page'); // Replace with your resume's container ID
-        const pdfOptions = {
-          margin: 10,
-          filename: 'resume.pdf',
-          image: { type: 'jpeg', quality: 0.98 },
-          html2canvas: { scale: 2 },
-          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        };
+        exportPdfButton.addEventListener('click', function () {
+          const resumeContainer = document.getElementById('page'); // Replace with your resume's container ID
+          const pdfOptions = {
+            margin: 10,
+            filename: 'resume.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+          };
 
-        html2pdf().from(resumeContainer).set(pdfOptions).outputPdf().then(function (pdf) {
-          const blob = new Blob([pdf], { type: 'application/pdf' });
-          const url = URL.createObjectURL(blob);
+          html2pdf().from(resumeContainer).set(pdfOptions).outputPdf().then(function (pdf) {
+            const blob = new Blob([pdf], { type: 'application/pdf' });
+            const url = URL.createObjectURL(blob);
 
-          // Create a link and trigger the download
-          const a = document.createElement('a');
-          a.href = url;
-          a.download = 'resume.pdf';
-          a.style.display = 'none';
-          document.body.appendChild(a);
-          a.click();
-          URL.revokeObjectURL(url);
+            // Create a link and trigger the download
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'resume.pdf';
+            a.style.display = 'none';
+            document.body.appendChild(a);
+            a.click();
+            URL.revokeObjectURL(url);
+          });
         });
       });
-    });
 
 
-  </script>
+    </script>
 
 </body>
 

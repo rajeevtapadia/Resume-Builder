@@ -129,13 +129,13 @@ const generate = () => {
         </li>
         <li><div>Score: <span class="resume-field" id="score">${elem.score}</span></div></li>
         </ul>
-        </div>
-    `
+        </div>`
         eduResume.appendChild(div)
     })
 
     // profile photo
-    document.getElementById('profile').src = formData.photo.value
+    if(formData.photo.value !== '')
+        document.getElementById('profile').src = formData.photo.value
 }
 
 // eventlistner for enter
