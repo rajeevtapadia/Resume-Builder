@@ -18,7 +18,8 @@ body{
     width: 70%;
 }
 .right{
-
+    /* margin-left: 50px; */
+    padding: 0 50px;
 }
 .header{
     display: flex;
@@ -38,12 +39,27 @@ body{
 td{
     padding: 10px
 }
+#skill-container > li > h4{
+    font-weight: normal;
+    font-size: 22px;
+}
+#link-container > li > h4 > a{
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+    font-size: 22px;
+}
+#link-container > li > h4 > a:hover{
+    text-decoration: underline;
+}
 #printButton{
     padding: 20px;
-    border-radius: 130px;
+    border-radius: 50%;
     position: fixed;
     bottom: 2vh;
     right: 10vh;
+    width: 60px;
+    aspect-ratio: 1/1;
 }
 @media print{
     #printButton, #edit{
